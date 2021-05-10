@@ -1,2 +1,2 @@
-# Number-Guessing-Game
+# Number Guessing Game
  For Treehouse Python Techdegree
