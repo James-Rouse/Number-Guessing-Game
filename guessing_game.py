@@ -2,6 +2,7 @@ import random
 
 print("Welcome to the Number Guessing Game!")
 answer_number = random.randrange(1, 11)
+player_trys = 0
 
 while True:
     try:
@@ -15,12 +16,14 @@ while True:
         continue
     if player_guess < answer_number:
         print("It is higher!")
+        player_trys += 1
         continue
     elif player_guess > answer_number:
         print("It is lower!")
+        player_trys += 1
         continue
     else:
-        print("You got it!")
+        print("You got it! It took you {} tries!".format(player_trys))
 
     while True:
         play_again = input("Would you like to play again? Yes or no?: ")
@@ -35,6 +38,7 @@ while True:
 
     if play_again == "yes":
         answer_number = random.randrange(1, 11)
+        player_trys = 0
         continue
     else:
         print("We hope you had fun!")
